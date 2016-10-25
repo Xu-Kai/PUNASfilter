@@ -3,7 +3,7 @@ CCFLAGS = -c -O3 -fopenmp -xMIC-AVX512 -ltbb
 LDFLAGS = -fopenmp  -ltbb 
 SOURCES = main.cc data_manager.cc filter.cc
 OBJECTS = $(SOURCES:.cc=.o)
-EXECUTABLE = eshd
+EXECUTABLE = PUNAS
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $(EXECUTABLE)
