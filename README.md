@@ -11,9 +11,7 @@ We have implemented our PUNAS algorithm as a standalone application (PUNASfilter
 incorporated into existing seed-and-extend based SRA tools. PUNASfilter is a filter that detects and 
 filters some of the string pairs that have edit-distances that are greater than error threshold T, but it 
 does not validate the string pairs that pass the filter regarding if they have edit-distances smaller than 
-T. In a DNA mapper or protein mapper, PUNASfilter should then be extended by a more expensive DP-based alignment method. The PUNASfilter application is written in OpenMPaugmented C++. Our implementation 
-employs a vectorize-and-scale approach and can be execyted on multi-core CPUs and many-core Knights 
-Landing (KNL)-based Xeon Phi processors as well.
+T. In a DNA mapper or protein mapper, PUNASfilter should then be extended by a more expensive DP-based alignment method. The PUNASfilter application is written in OpenMPaugmented C++. Our implementation employs a vectorize-and-scale approach and can be execyted on multi-core CPUs and many-core Knights Landing (KNL)-based Xeon Phi processors as well.
 
 Currently, we presents three implementations: they are PUNAS-SSE, PUNAS-AVX2, PUNAS-AVX512. They are 
 implemented using Intel SSE, AVX2 and AVX512 instructuon set respectively. Besides, the query string 
